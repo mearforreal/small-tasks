@@ -23,4 +23,9 @@ class Category extends Model
     {
         return $this->hasMany(Category::class)->with('categories');
     }
+
+    public function applications(): HasMany
+    {
+        return $this->hasMany(Application::class);
+    }
 }
